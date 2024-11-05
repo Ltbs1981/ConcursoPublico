@@ -8,7 +8,7 @@ namespace ConcursoPublico.Core.Entidades
 {
     public class AreaControleEGestao
     {
-        //public string Concurso { get; set; }
+        
         public string Banca { get; set; }
         public string PeriodoInscricoes { get; set; }
         public DateTime DataProva { get; set; }
