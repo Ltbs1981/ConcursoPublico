@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConcursoPublico.Infra.Repositorio
 {
-    public class RepositorioAreaControleEGestao : IRepositorioAreaControleEGestao
+    internal class RepositorioAreaControleEGestao : IRepositorioAreaControleEGestao
     {
         private readonly List<AreaControleEGestao> _concursos = new List<AreaControleEGestao>();
 

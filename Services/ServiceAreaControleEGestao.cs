@@ -1,14 +1,11 @@
-﻿using ConcursoPublico.Core.Contratos.Repositorios;
+﻿using ConcursoPublico.Core.Contratos.Servicos;
+using ConcursoPublico.Core.Contratos.Repositorios;
 using ConcursoPublico.Core.Entidades;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConcursoPublico.Services
 {
-    internal class ServiceAreaControleEGestao
+    public class ServiceAreaControleEGestao : IServiceAreaControleEGestao
     {
         private readonly IRepositorioAreaControleEGestao _repositorio;
 
@@ -22,7 +19,12 @@ namespace ConcursoPublico.Services
             _repositorio.Adicionar(concurso);
         }
 
-        public IEnumerable<AreaControleEGestao> ObterConcursos()
+        public IEnumerable<AreaControleEGestao> ListarConcursos()
+        {
+            return _repositorio.Listar();
+        }
+
+        public IEnumerable<AreaControleEGestao> ObterConcursos() // Implementação do método
         {
             return _repositorio.Listar();
         }

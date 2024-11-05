@@ -1,14 +1,11 @@
-﻿using ConcursoPublico.Core.Contratos.Repositorios;
+﻿using ConcursoPublico.Core.Contratos.Servicos;
+using ConcursoPublico.Core.Contratos.Repositorios;
 using ConcursoPublico.Core.Entidades;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConcursoPublico.Services
 {
-    internal class ServiceAreaPolicialESeguranca
+    public class ServiceAreaPolicialESeguranca : IServiceAreaPolicialESeguranca
     {
         private readonly IRepositorioAreaPolicialESeguranca _repositorio;
 
@@ -22,10 +19,14 @@ namespace ConcursoPublico.Services
             _repositorio.Adicionar(concurso);
         }
 
-        public IEnumerable<AreaPolicialESeguranca> ObterConcursos()
+        public IEnumerable<AreaPolicialESeguranca> ListarConcursos()
+        {
+            return _repositorio.Listar();
+        }
+
+        public IEnumerable<AreaPolicialESeguranca> ObterConcursos() // Implementação do método
         {
             return _repositorio.Listar();
         }
     }
 }
-
