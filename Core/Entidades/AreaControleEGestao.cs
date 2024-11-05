@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConcursoPublico.Core.Entidades
 {
-    internal class AreaControleEGestao
+    public class AreaControleEGestao
     {
         public string Concurso { get; set; }
         public string Banca { get; set; }

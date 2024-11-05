@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConcursoPublico.Core.Contratos.Servicos
+namespace ConcursoPublico.Core.Contratos.Controladores
 {
-    internal interface IServiceAreaPolicialESeguranca
+    internal interface IAreaPolicialESegurancaController
     {
         void AdicionarConcurso(AreaPolicialESeguranca concurso);
-        IEnumerable<AreaPolicialESeguranca> ObterConcursos();
+        IEnumerable<AreaPolicialESeguranca> ListarConcursos();
     }
 }
